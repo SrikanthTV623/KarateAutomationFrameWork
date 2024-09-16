@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Feature: features/GetBookings.feature</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>CucumberAutomation</td>
+              <td>1</td>
+            <td>02 Aug 2024, 16:58</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Feature Report</h2>
+      </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+        
+<thead>
+  <tr class="header dont-sort">
+        <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Feature</th>
+        <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">features/GetBookings.feature</td>
+                    <td      class="passed"    >4</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">4</td>
+
+          <td  class="passed"    >1</td>
+          <td >0</td>
+          <td class="total">1</td>
+
+          <td class="duration" data-value="926760600">926ms</td>
+          <td class="passed">Passed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="feature">
+        
+<div class="tags indention">
+  </div>
+
+        
+<div class="brief passed">
+  <span class="keyword indention">Feature</span>
+  <span class="name">features/GetBookings.feature</span>
+  
+
+  </div>
+
+        <div class="description indention">Get List Of Booking</div>
+
+        <div class="elements inner-level">
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Verify user can retrieve list of bookings</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url host</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method get</span>
+  
+  <span class="lead-duration duration">923ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">003ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>16:58:27.351 [print] &lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Welcome to Restful-Booker&lt;/title&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css?family=Cabin&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css?family=Muli&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css&quot;&gt;
+    &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+    &lt;style&gt;
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cabin', Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.2em;
+            font-family: 'Muli', Arial, Helvetica, sans-serif;
+        }
+	&lt;/style&gt;
+
+  &lt;!-- Google tag (gtag.js) --&gt;
+  &lt;script async src=&quot;https://www.googletagmanager.com/gtag/js?id=G-2Q48X98CJ6&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-2Q48X98CJ6');
+  &lt;/script&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;jumbotron p-4&quot;&gt;
+      &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;row&quot;&gt;
+          &lt;div class=&quot;col-12 text-center&quot;&gt;
+            &lt;h1&gt;Welcome to Restful-Booker&lt;/h1&gt;
+            &lt;p&gt;An API playground created by &lt;a href=&quot;http://mwtestconsultancy.co.uk/&quot;&gt;Mark Winteringham&lt;/a&gt; for those wanting to learn more about API testing and tools&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;row&quot;&gt;
+          &lt;div class=&quot;col-12 text-center&quot;&gt;
+            &lt;p&gt;&lt;a href=&quot;https://twitter.com/2bittester&quot; alt=&quot;Twitter&quot;&gt;@2bittester&lt;/a&gt; | &lt;a href=&quot;http://mwtestconsultancy.co.uk/&quot; alt=&quot;MWTestConsultancy Website&quot;&gt;Website&lt;/a&gt; | &lt;a href=&quot;https://github.com/mwinteringham/restful-booker&quot; alt=&quot;API Code&quot;&gt;Code&lt;/a&gt; | &lt;a href=&quot;/apidoc/index.html&quot; alt=&quot;API documentation&quot;&gt;API Docs&lt;/a&gt;&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-12&quot;&gt;
+        	&lt;p&gt;Welcome to Restful-booker an API that you can use to learn more about API Testing or try out API testing tools against. Restful-booker is a &lt;span style=&quot;color: red; font-weight: bold&quot;&gt;C&lt;/span&gt;reate &lt;span style=&quot;color: red; font-weight: bold&quot;&gt;R&lt;/span&gt;ead &lt;span style=&quot;color: red; font-weight: bold&quot;&gt;U&lt;/span&gt;pdate &lt;span style=&quot;color: red; font-weight: bold&quot;&gt;D&lt;/span&gt;elete Web API that comes with authentication features and loaded with a bunch of bugs for you to explore. The API comes pre-loaded with 10 records for you to work with &lt;span style=&quot;font-weight: bold&quot;&gt;and resets itself every 10 minutes back to that default state.&lt;/span&gt; Restful-booker also comes with &lt;a href=&quot;/apidoc/index.html&quot; alt=&quot;API documentation&quot;&gt;detailed API documentation&lt;/a&gt; to help get you started with your API testing straight away.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;row&quot;&gt;
+          &lt;div class=&quot;col-12&quot;&gt;
+				    &lt;h2&gt;Support me and Restful-Booker&lt;/h2&gt;
+				    &lt;br /&gt;
+				    &lt;p&gt;Restful-booker is a free to use API for practising testing, but if you enjoy using this API please consider supporting me by purchasing one of my books. Alternatively you can support &lt;a href=&quot;https://www.ministryoftesting.com/go-pro?utm_medium=web&amp;utm_source=restful-booker&quot; target=&quot;_blank&quot;&gt;Ministry of Testing&lt;/a&gt; who host this API by going Pro.&lt;/p&gt;
+          &lt;/div&gt;  
+      &lt;/div&gt;
+      &lt;div class=&quot;row text-center&quot;&gt;
+        &lt;div class=&quot;col-4&quot;&gt;
+            &lt;h4 class=&quot;pb-2&quot;&gt;Buy AI-Assisted Testing&lt;/h4&gt;
+            &lt;a href=&quot;https://bit.ly/ai-testing&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/images/ai-assisted-testing.jpg&quot; alt=&quot;Testing Web APIs&quot; class=&quot;img img-fluid w-50 border border-light&quot;&gt;&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-4&quot;&gt;
+          &lt;h4 class=&quot;pb-2&quot;&gt;Buy Testing Web APIs&lt;/h4&gt;
+          &lt;a href=&quot;https://bit.ly/testwebapis&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/images/testing-web-apis.jpg&quot; alt=&quot;Testing Web APIs&quot; class=&quot;img img-fluid w-50 border border-light&quot;&gt;&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-4&quot;&gt;
+            &lt;h4 class=&quot;pb-2&quot;&gt;Go Pro with Ministry of Testing&lt;/h4&gt;
+            &lt;a href=&quot;https://www.ministryoftesting.com/go-pro?utm_medium=web&amp;utm_source=restful-booker&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/images/motpro.png&quot; alt=&quot;Boost your learning, go Pro&quot; class=&quot;img img-fluid w-75&quot;&gt;&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+ 
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
